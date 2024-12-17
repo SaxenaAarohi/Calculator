@@ -28,6 +28,7 @@
         }
         .input{
             overflow-y: auto;
+            scrollbar-width: none; 
             height: 25%;
             padding: 10px;
             margin-left: 10px;
@@ -37,6 +38,7 @@
             border-top-right-radius: 10px;
         }
         .out{
+            overflow-y: auto;
             padding: 15px;
             height: 5%;
             margin-left: 10px;
@@ -239,6 +241,8 @@ function  saveToLocal(timeId,value){
 
 function equal(){
  const val=show.innerText;
+    if(val==")
+       show.innerHTML="";
  let output;
  output=eval(val);
 show.innerHTML=output;
